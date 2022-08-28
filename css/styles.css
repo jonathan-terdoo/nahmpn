@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    list-style: none;
+}
+body{
+    height: 100vh;
+}
+.sidebar{
+    width: 250px;
+    background-color: #148a5f;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: 9px;
+}
+::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 9px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #9b9a9a;
+}
+.sidebar .sidebar-cont a{
+    display: block;
+    font-size: 17pt;
+    color: aqua;
+    padding: 12px;
+}
+.sidebar .sidebar-cont a:hover{
+    color: aquamarine;
+    background-color: #18af78;
+}
+.sidebar .sidebar-cont .context a{
+    background-color: #2aaf7e;
+    display: block;
+    padding-left: 25pt;
+}
+.sidebar .sidebar-cont .context{
+    background-color: #2aaf7e;
+    display: none;
+}
+.sidebar .sidebar-cont .context a:hover{
+    background-color: #14c987;
+}
+.sidebar .logo-header{
+    text-align: center;
+    padding: 10px;
+}
+main{
+    margin-left: 250px;
+    background: linear-gradient(50deg, rgb(181, 193, 199) 50%, rgb(170, 174, 175) 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    top: 0;
+    position: relative;
+}
+.upto{
+    width: 100%;
+    min-height: calc(100% - 20vh);
+    border: 1px solid blue;
+}
+main header{
+    background-color: #ccc;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main header input{
+    margin-left: 9px;
+    margin-right: 9px;
+    flex-grow: 1;
+    height: 45px;
+    border: none;
+    border-bottom: 2px solid blue;
+    background-color: transparent;
+    text-indent: 5px;
+    font-size: 15pt;
+    color: rgb(124, 59, 36);
+    outline: none;
+}
+main header input:focus{
+    border-bottom: 2px solid rgb(83, 73, 14);
+}
+:is(main header h1, .sidebar .logo-header h1){
+    background-image: linear-gradient(to right,#59105c,#360f1e, #0e4732);
+    background-image: -webkit-linear-gradient(to right,#59105c,#360f1e, #0e4732);
+    -webkit-background-clip: text;
+    -webkit-background-size: 100%;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    font-size: 20pt;
+}
+/*
+main header .user{
+    display: none;
+}*/
+main header .user .circle{
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(8, 94, 94);
+    border-radius: 50%;
+}
+main .pane{
+    height: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: justify;
+    color: black;
+    font-size: 15pt;
+    font-weight: 100;
+    border-bottom: 4px dotted #2b179e;
+    margin-bottom: 12px;
+}
+main .pane p{
+    margin-left: 20px;
+}
+main .pane2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100% - 45vh);
+}
+main .pane2 .slide{
+    flex-grow: 1;
+    border-radius: 19px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    width: 300px;
+    height: 280px;
+    background-color: #f1f1f1;
+}
+main header .bar{
+    font-size: 20pt;
+    font-weight: 400;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    padding: 2px;
+    cursor: pointer;    
+    border-radius: 50%;
+    color: purple;
+    display: none;
+}
+main header .bar:hover{
+    color: #1a64b9;
+}
+main footer{
+    text-align: center;
+    width: 100%;
+    height: 20vh;
+    background-color: #b9b9b9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.col{
+    columns: 2;
+    letter-spacing: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+@media screen and (max-width: 800px) {
+    .sidebar{
+        display: none;
+    }
+    main{
+        margin-left: 0;
+        height: -webkit-fill-available;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    main header .bar{
+        display: block;
+    }
+    main .pane2{
+        display: block;
+    }
+    main .pane2 .slide{
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    main header h1{
+        display: none;
+    }
+}
