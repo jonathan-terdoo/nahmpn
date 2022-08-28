@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/new-style.css">
+    <script src="jquery-3.6.0.js"></script>
+    <title>Nhmp dashboard</title>
+</head>
+<body>
+    <div class="parent">
+        <nav>
+            <div class="logo">
+                <img src="images/NAHMP_Logo.png" alt="Nhmp logo" height="160" width="160">
+            </div>
+            <p class="h1">Dashboard</p>
+            <div class="links">
+                <button class="li">&sext; About us</button>
+                <div class="panel">
+                    <button><a href="#">&rArr; Vision</a></button>
+                    <button><a href="#">&rArr; Mission</a></button>
+                    <button><a href="#">&rArr; Organogram</a></button>                       
+                </div>
+                <button class="li">&sext; Licensing</button>
+                <div class="panel">
+                    <button><a href="#">&rArr; link</a></button>
+                    <button><a href="#">&rArr; link</a></button>
+                    <button><a href="#">&rArr; link</a></button>                       
+                </div>
+                <button class="li">&sext; Pulication</button>
+                <div class="panel">
+                    <button><a href="#">&rArr; link</a></button>
+                    <button><a href="#">&rArr; link</a></button>
+                    <button><a href="#">&rArr; link</a></button>                       
+                </div>
+                <button>&sext; News</button>
+                <button>&rArr; Inspection and Monitoring</button>
+                <button>&rArr; Partner Support</button>
+            </div>
+        </nav>
+        <!-- main contents here -->
+        <main>
+            <header>
+                <h2>Welcome to NAHMP</h2>
+                <div class="search-pane">
+                    <input type="text" name="search" id="search" placeholder="Search...">
+                </div>
+                <div class="log">
+                    <a href="register.php">Register</a>
+                    <p>|</p>
+                    <a href="signin.php">Log in</a>
+                    <span class="current">
+                        <div class="cent">
+                            <p>&ctdot;</p>
+                        </div>
+                        <span class="set-pane">
+                            <button class="btn1"><a href="#">Settings</a></button>
+                            <button class="btn1"><a href="#">Log out</a></button>
+                        </span>
+                    </span>                    
+                </div>
+            </header>
+
+            <div class="body">
+                <div class="body-text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatum 
+                        mollitia consequuntur minima blanditiis quo, ratione repudiandae 
+                        accusamus. Odit eveniet architecto magni enim quo rem dolores, 
+                        ea consequatur natus hic.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatum 
+                        mollitia consequuntur minima blanditiis quo, ratione repudiandae 
+                        accusamus. Odit eveniet architecto magni enim quo rem dolores, 
+                        ea consequatur natus hic.
+                    </p>
+                </div>
+                <div class="slide-span">
+                    <div class="slide">
+                        <p>Comming soon...</p>
+                    </div>
+                    <div class="slide">
+                        <p>Comming soon...</p>
+                    </div>
+                    <div class="slide">
+                        <p>Comming soon...</p>
+                    </div>
+                    <div class="slide">
+                        <p>Comming soon...</p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>&copy; Design by Demawa Jonathan Terdoo</p>
+                </div>
+                <div class="message">
+                    <a href="#">Chat</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.links .li').click(function(){
+                if(false == $(this).next().is(':visible')){
+                    $('.links .panel').slideUp(400);
+                    $(this).next().slideToggle(400);
+                }else{
+                    $(this).next().slideUp(400);
+                }
+            });
+            $('.links .panel').eq(0).css("display", "block");
+        });
+        const b = (b) => document.querySelector(b);
+        b('nav').onmouseover = function(){
+            this.classList.add('show-scroll');
+        }
+        b('nav').onmouseout = function(){
+            this.classList.remove('show-scroll');
+        }
+        b('.cent p').onmouseover = function(){
+            b('.set-pane').style.cssText = "visibility: visible; opacity: 1;";
+            preventDefault();
+        }
+        b('.set-pane').onmouseout = function(){
+            this.style.cssText = "visibility: hidden; opacity: 0;";
+        }
+        b('.set-pane').onmouseover = function(){
+            this.style.cssText = "visibility: visible; opacity: 1;";
+        }
+    </script>
+</body>
+</html>
